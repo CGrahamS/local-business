@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Next Adventure</string>
+    <string-array name="categories">
+        <item>Men</item>
+        <item>Camp</item>
+        <item>Climb</item>
+        <item>Women</item>
+        <item>Downhill Ski</item>
+        <item>XC Ski</item>
+        <item>Paddle</item>
+        <item>Snowboard</item>
+        <item>Snowshoe</item>
+    </string-array>
 </resources>
+
+
