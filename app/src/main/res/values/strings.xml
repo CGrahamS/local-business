@@ -11,6 +11,11 @@
         <item>Snowboard</item>
         <item>Snowshoe</item>
     </string-array>
+    <string-array name="clothing">
+        <item>Tops</item>
+        <item>Bottoms</item>
+        <item>Shoes</item>
+    </string-array>
 </resources>
 
 

@@ -1,5 +1,6 @@
 package com.example.guest.nextadventure;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mCategories = getResources().getStringArray(R.array.categories);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories){
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
-                textView.setTextColor(Color.parseColor("#ff0000"));
-
+                textView.setTextSize(11.0f);
+                textView.setGravity(0x11);
                 return textView;
             }
         };
@@ -42,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String category = ((TextView)view).getText().toString();
-                Toast.makeText(MainActivity.this, category, Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+                intent.putExtra("category", category);
+                startActivity(intent);
             }
         });
 

@@ -25,15 +25,16 @@
         android:layout_marginTop="31dp" />
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/LargeFont"
         android:id="@+id/gridView"
         android:layout_below="@id/backgroundImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnWidth="90dp"
+        android:columnWidth="100dp"
         android:numColumns="3"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="5dp"
-        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:stretchMode="spacingWidthUniform"
         android:gravity="center"
         android:layout_above="@+id/button" />
 
