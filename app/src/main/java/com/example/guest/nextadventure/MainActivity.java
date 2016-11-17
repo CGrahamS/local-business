@@ -1,9 +1,11 @@
 package com.example.guest.nextadventure;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,7 +27,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mCategories = getResources().getStringArray(R.array.categories);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories){
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                TextView textView = (TextView) super.getView(position, convertView, parent);
+                textView.setTextColor(Color.parseColor("#ff0000"));
+
+                return textView;
+            }
+        };
         mGridView.setAdapter(adapter);
 
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
