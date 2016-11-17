@@ -16,6 +16,35 @@
         <item>Bottoms</item>
         <item>Shoes</item>
     </string-array>
+    <string-array name="camping">
+        <item>Tents</item>
+        <item>Rain Cover</item>
+        <item>Hammock</item>
+    </string-array>
+    <string-array name="climbing">
+        <item>Harness</item>
+        <item>Rope</item>
+        <item>Carabiner</item>
+    </string-array>
+    <string-array name="skiing">
+        <item>Skis</item>
+        <item>Boots</item>
+        <item>Poles</item>
+    </string-array>
+    <string-array name="paddle">
+        <item>Tarpons</item>
+        <item>Dry Bags</item>
+        <item>Helmets</item>
+    </string-array>
+    <string-array name="snowboard">
+        <item>Snowboards</item>
+        <item>Boots</item>
+        <item>Board Bags</item>
+    </string-array>
+    <string-array name="snowshoe">
+        <item>Snowshoes</item>
+        <item>Poles</item>
+    </string-array>
 </resources>
 
 
