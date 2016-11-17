@@ -17,16 +17,15 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     @Bind(R.id.gridView) GridView mGridView;
-    private String[] categories = new String[] {"Men", "Women", "Paddle", "Camp", "Downhill Ski", "Snowboard", "Climb", "XC Ski", "Snowshoe"};
-
+    private String[] mCategories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        Log.d("blah",categories[0]);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, categories);
+        mCategories = getResources().getStringArray(R.array.categories);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories);
         mGridView.setAdapter(adapter);
 
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
