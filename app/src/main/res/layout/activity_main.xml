@@ -22,19 +22,27 @@
         android:adjustViewBounds="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp" />
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        style="@style/LargeFont"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textColor="#fff"
+        android:text="Next Adventure"
+        android:id="@+id/textView2"
+        android:gravity="center"
+        android:layout_below="@+id/backgroundImage"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true" />
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         style="@style/LargeFont"
         android:id="@+id/gridView"
-        android:layout_below="@id/backgroundImage"
+        android:layout_below="@id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnWidth="100dp"
         android:numColumns="3"
-        android:verticalSpacing="1dp"
-        android:horizontalSpacing="1dp"
-        android:stretchMode="spacingWidthUniform"
         android:gravity="center"
         android:layout_above="@+id/button" />
 

@@ -2,6 +2,7 @@ package com.example.guest.nextadventure;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,9 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     @Bind(R.id.gridView) GridView mGridView;
+    @Bind(R.id.textView2) TextView mTextView;
+    @Bind(R.id.button) Button mButton;
+    @Bind(R.id.button2) Button mButton2;
     private String[] mCategories;
 
     @Override
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        final Typeface adelleBold = Typeface.createFromAsset(getAssets(), "fonts/adelle-bold.ttf");
+        mTextView.setTypeface(adelleBold);
         mCategories = getResources().getStringArray(R.array.categories);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mCategories) {
             @Override
@@ -34,10 +40,14 @@ public class MainActivity extends AppCompatActivity {
                 TextView textView = (TextView) super.getView(position, convertView, parent);
                 textView.setTextSize(11.0f);
                 textView.setGravity(0x11);
+                textView.setTypeface(adelleBold);
                 return textView;
             }
         };
         mGridView.setAdapter(adapter);
+
+        mButton.setTypeface(adelleBold);
+        mButton2.setTypeface(adelleBold);
 
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
